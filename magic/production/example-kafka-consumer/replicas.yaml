@@ -4,4 +4,4 @@ metadata:
   name: "example-kafka-consumer-deployment"
   namespace: default
 spec:
-  replicas: 30
+  replicas: 35
