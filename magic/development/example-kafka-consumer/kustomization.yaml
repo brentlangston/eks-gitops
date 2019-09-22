@@ -4,6 +4,7 @@ commonLabels:
 commonAnnotations:
   note: This is development
 bases:
-- ../../base
+- ../../base/example-kafka-consumer
 patches:
+- image.yaml
 - replicas.yaml

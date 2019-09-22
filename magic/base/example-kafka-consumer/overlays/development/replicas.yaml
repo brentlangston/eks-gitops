@@ -1,7 +1,0 @@
-apiVersion: extensions/v1beta1
-kind: Deployment
-metadata:
-  name: "example-kafka-consumer-deployment"
-  namespace: default
-spec:
-  replicas: 3
