@@ -1,0 +1,15 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pink-api
+spec:
+  selector:
+    matchLabels:
+      app: pink-api
+    spec:
+      containers:
+      - name: pink-api
+        env:
+        - name: msg
+          value: This is pink-api in development

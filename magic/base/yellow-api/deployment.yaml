@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yellow-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: yellow-api
+  template:
+    metadata:
+      labels:
+        app: yellow-api
+    spec:
+      containers:
+      - name: yellow-api
+        image: brentlangston/example-api:latest
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 8000
+      nodeSelector:
+        nodegroup-type: api-workers

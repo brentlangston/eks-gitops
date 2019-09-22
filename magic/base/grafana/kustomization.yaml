@@ -1,0 +1,5 @@
+commonLabels: 
+  app: grafana
+resources:
+- deployment.yaml
+- namespace.yaml

@@ -1,0 +1,4 @@
+commonLabels: 
+  app: alb-ingress-rules
+resources:
+- alb-ingress-rules.yaml

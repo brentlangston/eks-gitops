@@ -1,0 +1,15 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yellow-api
+spec:
+  selector:
+    matchLabels:
+      app: yellow-api
+    spec:
+      containers:
+      - name: yellow-api
+        env:
+        - name: msg
+          value: "This is yellow-api in development"

@@ -1,0 +1,6 @@
+commonLabels: 
+  app: yellow-api
+resources:
+- deployment.yaml
+- service.yaml
+- autoscaling.yaml

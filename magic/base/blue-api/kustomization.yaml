@@ -1,0 +1,6 @@
+commonLabels: 
+  app: blue-api
+resources:
+- deployment.yaml
+- service.yaml
+- autoscaling.yaml

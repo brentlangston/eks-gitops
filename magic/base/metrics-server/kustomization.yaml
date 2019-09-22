@@ -1,0 +1,5 @@
+commonLabels: 
+  app: metrics-server
+resources:
+- deployment.yaml
+- namespace.yaml

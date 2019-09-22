@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: alb-ingress-rules
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internal
+  labels:
+    app: alb-ingress-rules
+spec:
+  rules:
+    - host: 2048.production.intranet.local
+      http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: service-2048
+              servicePort: 80
+    - host: helloworld.production.intranet.local
+      http:
+        paths:
+          - path: /*
+            backend:
+              serviceName: helloworld
+              servicePort: 80

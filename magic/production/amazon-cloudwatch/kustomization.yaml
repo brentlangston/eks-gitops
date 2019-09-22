@@ -1,0 +1,10 @@
+namePrefix: production-
+commonLabels: 
+  variant: production
+commonAnnotations:
+  note: This is production
+bases:
+- ../../base/amazon-cloudwatch
+patches:
+- fluentd-configmap-cluster-info.yaml
+- cloudwatch-agent-configmap.yaml

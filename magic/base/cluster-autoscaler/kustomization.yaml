@@ -1,0 +1,5 @@
+commonLabels: 
+  app: cluster-autoscaler
+resources:
+- deployment.yaml
+- rbac.yaml

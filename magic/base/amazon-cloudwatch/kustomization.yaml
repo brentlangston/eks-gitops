@@ -1,0 +1,11 @@
+commonLabels: 
+  app: amazon-cloudwatch
+resources:
+- amazon-cloudwatch.yaml
+- cloudwatch-agent-configmap.yaml
+- cloudwatch-agent-daemonset.yaml
+- cloudwatch-agent-rbac.yaml
+- fluentd-configmap-cluster-info.yaml
+- fluentd-configmap-fluentd-config.yaml
+- fluentd-daemonset.yaml
+- fluentd-rbac.yaml

@@ -1,0 +1,9 @@
+namePrefix: development-
+commonLabels: 
+  variant: development
+commonAnnotations:
+  note: This is development
+bases:
+- ../../base/yellow-api
+patches:
+- deployment.yaml

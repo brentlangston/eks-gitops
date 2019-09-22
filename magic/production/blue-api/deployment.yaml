@@ -1,0 +1,15 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-api
+spec:
+  selector:
+    matchLabels:
+      app: blue-api
+    spec:
+      containers:
+      - name: blue-api
+        env:
+        - name: msg
+          value: "This is blue-api in production"

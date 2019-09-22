@@ -1,0 +1,6 @@
+commonLabels: 
+  app: red-api
+resources:
+- deployment.yaml
+- service.yaml
+- autoscaling.yaml

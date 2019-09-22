@@ -1,0 +1,6 @@
+commonLabels: 
+  app: pink-api
+resources:
+- deployment.yaml
+- service.yaml
+- autoscaling.yaml

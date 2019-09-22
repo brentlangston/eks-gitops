@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pink-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pink-api
+  template:
+    metadata:
+      labels:
+        app: pink-api
+    spec:
+      containers:
+      - name: pink-api
+        image: brentlangston/example-api:latest
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 8000
+      nodeSelector:
+        nodegroup-type: api-workers

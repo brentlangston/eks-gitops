@@ -1,0 +1,7 @@
+namePrefix: production-
+commonLabels: 
+  variant: production
+commonAnnotations:
+  note: This is production
+bases:
+- ../../base/prometheus

@@ -1,0 +1,4 @@
+commonLabels: 
+  app: example-kafka-consumer
+resources:
+- deployment.yaml

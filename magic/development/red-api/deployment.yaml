@@ -1,0 +1,15 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: red-api
+spec:
+  selector:
+    matchLabels:
+      app: red-api
+    spec:
+      containers:
+      - name: red-api
+        env:
+        - name: msg
+          value: "This is red-api in development"
