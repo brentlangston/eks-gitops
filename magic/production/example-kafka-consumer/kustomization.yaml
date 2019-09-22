@@ -1,0 +1,10 @@
+namePrefix: production-
+commonLabels: 
+  variant: production
+commonAnnotations:
+  note: This is production
+bases:
+- ../../base/example-kafka-consumer
+patches:
+- image.yaml
+- replicas.yaml
