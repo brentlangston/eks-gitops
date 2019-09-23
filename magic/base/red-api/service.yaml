@@ -6,7 +6,8 @@ metadata:
     alb.ingress.kubernetes.io/healthcheck-path: /
 spec:
   ports:
-  - port: 8000
-    targetPort: 8000
+    - port: 8000
+      targetPort: 8000
+      protocol: TCP
   selector:
     app: red-api
