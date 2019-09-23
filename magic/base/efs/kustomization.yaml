@@ -1,0 +1,4 @@
+commonLabels: 
+  app: efs
+resources:
+- efs.yaml
