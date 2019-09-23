@@ -5,9 +5,6 @@ metadata:
   name: blue-api
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      app: blue-api
   template:
     metadata:
       labels:
