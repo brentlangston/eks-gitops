@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: blue-api
+  name: "blue-api"
   annotations:
     alb.ingress.kubernetes.io/healthcheck-path: /
 spec:
   ports:
-  - port: 8000
-    targetPort: 8000
+    - port: 8000
+      targetPort: 8000
+      protocol: TCP
   selector:
     app: blue-api
