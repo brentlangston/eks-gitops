@@ -14,9 +14,12 @@ spec:
         app: pink-api
     spec:
       containers:
-      - name: pink-api
+      - env:
+        - name: msg
+          value: This is the PINK api!
         image: brentlangston/example-api:latest
-        imagePullPolicy: "Always"
+        imagePullPolicy: Always
+        name: pink-api
         ports:
         - containerPort: 8000
       nodeSelector:

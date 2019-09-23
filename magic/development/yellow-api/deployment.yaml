@@ -14,9 +14,12 @@ spec:
         app: yellow-api
     spec:
       containers:
-      - name: yellow-api
+      - env:
+        - name: msg
+          value: This is the YELLOW api!
         image: brentlangston/example-api:latest
         imagePullPolicy: "Always"
+        name: yellow-api
         ports:
         - containerPort: 8000
       nodeSelector:

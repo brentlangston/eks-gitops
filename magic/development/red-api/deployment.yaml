@@ -14,9 +14,12 @@ spec:
         app: red-api
     spec:
       containers:
-      - name: red-api
+      - env:
+        - name: msg
+          value: This is the RED api!
         image: brentlangston/example-api:latest
         imagePullPolicy: "Always"
+        name: red-api
         ports:
         - containerPort: 8000
       nodeSelector:
