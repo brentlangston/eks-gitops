@@ -1,6 +1,0 @@
-commonLabels: 
-  variant: development
-commonAnnotations:
-  note: This is development
-bases:
-- ../../base/metrics-server
