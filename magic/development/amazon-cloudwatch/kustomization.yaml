@@ -1,6 +1,0 @@
-bases:
-- ../../base/amazon-cloudwatch
-#patches:
-# - amazon-cloudwatch.yaml
-# - fluentd-configmap-cluster-info.yaml
-# - cloudwatch-agent-configmap.yaml
