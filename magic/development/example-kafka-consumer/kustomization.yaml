@@ -7,4 +7,3 @@ bases:
 - ../../base/example-kafka-consumer
 patches:
 - image.yaml
-- replicas.yaml
