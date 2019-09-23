@@ -20,4 +20,4 @@ spec:
         ports:
         - containerPort: 8000
       nodeSelector:
-        nodegroup-type: api-workers
+        nodegroup-type: api-workloads
