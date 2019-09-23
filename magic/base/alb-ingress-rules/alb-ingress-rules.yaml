@@ -13,25 +13,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /pink/*
-            backend:
-              serviceName: pink-api
-              servicePort: 8000
-    - http:
-        paths:
           - path: /blue/*
             backend:
               serviceName: blue-api
-              servicePort: 8000
-    - http:
-        paths:
-          - path: /yellow/*
-            backend:
-              serviceName: yellow-api
-              servicePort: 8000
-    - http:
-        paths:
-          - path: /red/*
-            backend:
-              serviceName: red-api
               servicePort: 8000
