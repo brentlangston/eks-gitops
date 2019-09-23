@@ -5,6 +5,9 @@ metadata:
   name: yellow-api
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: yellow-api
   template:
     metadata:
       labels:

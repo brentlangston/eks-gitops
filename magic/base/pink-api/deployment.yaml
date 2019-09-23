@@ -5,6 +5,9 @@ metadata:
   name: pink-api
 spec:
   replicas: 3
+  selector:
+    matchLabels:
+      app: pink-api
   template:
     metadata:
       labels:
