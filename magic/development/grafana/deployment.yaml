@@ -1,0 +1,29 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: grafana
+  namespace: grafana
+  annotations:
+    flux.weave.works/automated: "true"
+spec:
+  releaseName: grafana
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: grafana
+    version: 3.8.10
+  values:
+    persistence:
+        enabled: true
+    persistence.storageClassName: efs
+    admin.password: "mysecret"
+    datasources: 
+       datasources.yaml:
+            apiVersion: 1
+            datasources:
+            - name: Prometheus
+              type: prometheus
+              url: http://prometheus-server.prometheus.svc.cluster.local
+              access: proxy
+              isDefault: true
+    service.type: LoadBalancer
