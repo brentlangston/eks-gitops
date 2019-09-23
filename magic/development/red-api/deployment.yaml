@@ -4,12 +4,20 @@ kind: Deployment
 metadata:
   name: red-api
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: red-api
+  template:
+    metadata:
+      labels:
+        app: red-api
     spec:
       containers:
       - name: red-api
-        env:
-        - name: msg
-          value: "This is red-api in development"
+        image: brentlangston/example-api:latest
+        imagePullPolicy: "Always"
+        ports:
+        - containerPort: 8000
+      nodeSelector:
+        nodegroup-type: api-workers
