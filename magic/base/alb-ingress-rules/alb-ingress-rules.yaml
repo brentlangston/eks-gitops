@@ -17,3 +17,15 @@ spec:
             backend:
               serviceName: blue-api
               servicePort: 8000
+          - path: /yellow/*
+            backend:
+              serviceName: yellow-api
+              servicePort: 8000
+          - path: /pink/*
+            backend:
+              serviceName: pink-api
+              servicePort: 8000
+          - path: /red/*
+            backend:
+              serviceName: red-api
+              servicePort: 8000
