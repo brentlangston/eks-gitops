@@ -37,9 +37,11 @@ helm install --name flux \
 --set helmOperator.create=true \
 --set helmOperator.createCRD=false \
 --set git.url=git@github.com:brentlangston/eks-gitops \
---set git.path="common\,brents-test" \
---set git.label=cluster-name \
+--set git.path="magic/development" \
+--set git.label=development-cluster \
+--set git-branch=master \
 --set prometheus.enabled=true \
+--set manifest-generation=true \
 --set syncGarbageCollection.enabled=true \
 --namespace flux \
 fluxcd/flux
