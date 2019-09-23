@@ -13,7 +13,6 @@ spec:
       containers:
       - image: progrium/stress:latest
         command: ["stress"]
-        args: ["--cpu 2 --io 1 --vm 2 --hdd 4 --hdd-bytes 10M"]
         resources:
           limits:
             cpu: 1
