@@ -21,5 +21,5 @@ spec:
             cpu: 1
         imagePullPolicy: Always
         name: "example-kafka-consumer"
-  nodeSelector:
-    nodegroup-type: mapr-consumer-workloads
+      nodeSelector:
+        nodegroup-type: mapr-consumer-workloads
