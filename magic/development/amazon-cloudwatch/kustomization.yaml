@@ -1,4 +1,3 @@
-namePrefix: development-
 commonLabels: 
   variant: development
 commonAnnotations:
@@ -6,5 +5,6 @@ commonAnnotations:
 bases:
 - ../../base/amazon-cloudwatch
 patches:
+# - amazon-cloudwatch.yaml
 - fluentd-configmap-cluster-info.yaml
 - cloudwatch-agent-configmap.yaml
