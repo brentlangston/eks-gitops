@@ -13,14 +13,13 @@ metadata:
   # namespace scope, see --watch-namespace.
   namespace: kube-system
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: 'alb-ingress-controller'
+      app.kubernetes.io/name: alb-ingress-controller
   template:
     metadata:
-      annotations:
-        app.kubernetes.io/name: 'alb-ingress-controller'
+      labels:
+        app.kubernetes.io/name: alb-ingress-controller
     spec:
       containers:
       - name: alb-ingress-controller
