@@ -4,11 +4,23 @@ kind: Deployment
 metadata:
   name: blue-api
 spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blue-api
   template:
+    metadata:
+      labels:
+        app: blue-api
     spec:
       containers:
-      - name: blue-api
-        image: brentlangston/example-api:latest
-        env:
+      - env:
         - name: msg
-          value: "This is the BLUE api!"
+          value: This is the BLUE api!
+        image: brentlangston/example-api:latest
+        imagePullPolicy: Always
+        name: blue-api
+        ports:
+        - containerPort: 8000
+      nodeSelector:
+        nodegroup-type: api-workloads
