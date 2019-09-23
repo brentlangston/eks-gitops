@@ -16,9 +16,9 @@ spec:
         args: ["--cpu 2 --io 1 --vm 2 --hdd 4 --hdd-bytes 10M"]
         resources:
           limits:
-            cpu: "500m"
+            cpu: 1
           requests:
-            cpu: "200m"
+            cpu: 1
         imagePullPolicy: Always
         name: "example-kafka-consumer"
   nodeSelector:
