@@ -5,6 +5,7 @@ metadata:
   annotations:
     alb.ingress.kubernetes.io/healthcheck-path: /
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: '300'
+    alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '120'
 spec:
   ports:
     - port: 80
