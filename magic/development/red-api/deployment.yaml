@@ -4,7 +4,6 @@ kind: Deployment
 metadata:
   name: red-api
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: red-api
