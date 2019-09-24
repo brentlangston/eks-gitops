@@ -17,6 +17,11 @@ spec:
         - name: msg
           value: This is the YELLOW api!
         image: brentlangston/example-api:latest
+        resources:
+          limits:
+            cpu: "1"
+          requests:
+            cpu: "0.5"
         imagePullPolicy: "Always"
         name: yellow-api
         ports:
