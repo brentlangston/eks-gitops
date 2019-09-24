@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: red-api
-        image: brentlangston/example-api:latest
+        image: k8s.gcr.io/hpa-example:latest
         resources:
           limits:
             cpu: "1"
@@ -22,6 +22,6 @@ spec:
             cpu: "0.5"
         imagePullPolicy: "Always"
         ports:
-        - containerPort: 8000
+        - containerPort: 80
       nodeSelector:
         nodegroup-type: api-workloads
