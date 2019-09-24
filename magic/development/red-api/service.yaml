@@ -3,7 +3,8 @@ kind: Service
 metadata:
   name: "red-api"
   annotations:
-    alb.ingress.kubernetes.io/healthcheck-path: /
+    alb.ingress.kubernetes.io/healthcheck-path: /foo
+    alb.ingress.kubernetes.io/success-codes: '200-499'
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: '300'
     alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '120'
 spec:
