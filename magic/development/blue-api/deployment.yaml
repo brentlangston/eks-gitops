@@ -17,7 +17,7 @@ spec:
         image: brentlangston/example-api:latest
         env:
         - name: msg
-          value: "blue-api! "
+          value: "BLUE-api! "
         resources:
           limits:
             cpu: "1000m"
