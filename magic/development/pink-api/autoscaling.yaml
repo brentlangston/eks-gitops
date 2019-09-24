@@ -9,5 +9,5 @@ spec:
     kind: Deployment
     name: pink-api
   minReplicas: 3
-  maxReplicas: 15
+  maxReplicas: 25
   targetCPUUtilizationPercentage: 75
