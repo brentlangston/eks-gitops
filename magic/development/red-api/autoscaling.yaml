@@ -9,7 +9,7 @@ spec:
     kind: Deployment
     name: red-api
   minReplicas: 3
-  maxReplicas: 25
+  maxReplicas: 50
   metrics:
   - type: Resource
     resource:

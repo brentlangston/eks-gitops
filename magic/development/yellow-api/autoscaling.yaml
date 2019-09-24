@@ -9,5 +9,5 @@ spec:
     kind: Deployment
     name: yellow-api
   minReplicas: 3
-  maxReplicas: 25
+  maxReplicas: 50
   targetCPUUtilizationPercentage: 75
