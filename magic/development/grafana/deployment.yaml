@@ -13,8 +13,8 @@ spec:
     name: grafana
     version: 3.8.15
   values:
-    service.type: LoadBalancer
-    service.port: 80
+    service:
+      type: LoadBalancer
     persistence:
         enabled: true
     persistence.storageClassName: efs
