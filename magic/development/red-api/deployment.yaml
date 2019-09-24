@@ -17,10 +17,8 @@ spec:
       - name: red-api
         image: k8s.gcr.io/hpa-example:latest
         resources:
-          limits:
-            cpu: "5"
           requests:
-            cpu: "2"
+            cpu: "200m"
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
