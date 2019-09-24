@@ -15,6 +15,9 @@ spec:
       containers:
       - name: yellow-api
         image: brentlangston/example-api:latest
+        env:
+        - name: msg
+          value: "yellow-api! "
         resources:
           limits:
             cpu: "1"

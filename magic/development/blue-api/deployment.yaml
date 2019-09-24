@@ -15,6 +15,9 @@ spec:
       containers:
       - name: blue-api
         image: brentlangston/example-api:latest
+        env:
+        - name: msg
+          value: "blue-api! "
         resources:
           limits:
             cpu: "1000m"

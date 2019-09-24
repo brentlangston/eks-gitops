@@ -15,6 +15,9 @@ spec:
       containers:
       - name: pink-api
         image: brentlangston/example-api:latest
+        env:
+        - name: msg
+          value: "pink-api! "
         resources:
           limits:
             cpu: "200m"
