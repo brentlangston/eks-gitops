@@ -17,9 +17,9 @@ spec:
         image: k8s.gcr.io/hpa-example:latest
         resources:
           limits:
-            cpu: "1"
+            cpu: "5"
           requests:
-            cpu: "0.5"
+            cpu: "2"
         imagePullPolicy: "Always"
         ports:
         - containerPort: 80
