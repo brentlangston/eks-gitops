@@ -11,7 +11,7 @@ spec:
   chart:
     repository: https://kubernetes-charts.storage.googleapis.com/
     name: grafana
-    version: 3.8.10
+    version: 3.8.15
   values:
     service.type: "LoadBalancer"
     persistence:
