@@ -13,9 +13,7 @@ spec:
         app: red-api
     spec:
       containers:
-      - env:
-        - name: msg
-          value: This is the RED api!
+      - name: red-api
         image: brentlangston/example-api:latest
         resources:
           limits:
@@ -23,7 +21,6 @@ spec:
           requests:
             cpu: "0.5"
         imagePullPolicy: "Always"
-        name: red-api
         ports:
         - containerPort: 8000
       nodeSelector:

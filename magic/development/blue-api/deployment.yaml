@@ -13,9 +13,7 @@ spec:
         app: blue-api
     spec:
       containers:
-      - env:
-        - name: msg
-          value: This is the BLUE api!
+      - name: blue-api
         image: brentlangston/example-api:latest
         resources:
           limits:

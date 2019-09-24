@@ -13,9 +13,7 @@ spec:
         app: yellow-api
     spec:
       containers:
-      - env:
-        - name: msg
-          value: This is the YELLOW api!
+      - name: yellow-api
         image: brentlangston/example-api:latest
         resources:
           limits:
@@ -23,7 +21,6 @@ spec:
           requests:
             cpu: "0.5"
         imagePullPolicy: "Always"
-        name: yellow-api
         ports:
         - containerPort: 8000
       nodeSelector:

@@ -13,9 +13,7 @@ spec:
         app: pink-api
     spec:
       containers:
-      - env:
-        - name: msg
-          value: This is the PINK api!
+      - name: pink-api
         image: brentlangston/example-api:latest
         resources:
           limits:

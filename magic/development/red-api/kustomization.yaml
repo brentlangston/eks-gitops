@@ -1,4 +1,0 @@
-bases:
-- ../../base/red-api
-patches:
-- deployment.yaml

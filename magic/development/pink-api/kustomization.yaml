@@ -1,4 +1,0 @@
-bases:
-- ../../base/pink-api
-patches:
-- deployment.yaml

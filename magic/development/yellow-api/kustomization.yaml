@@ -1,4 +1,0 @@
-bases:
-- ../../base/yellow-api
-patches:
-- deployment.yaml
