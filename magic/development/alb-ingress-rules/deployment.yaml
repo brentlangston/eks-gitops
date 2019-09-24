@@ -29,7 +29,10 @@ spec:
           serviceName: pink-api
           servicePort: 8000
         path: /pink/*
-      - backend:
+  - host: red-api.service.internal
+    http:
+      paths:
+      - path: /*
+        backend:
           serviceName: red-api
-          servicePort: 8000
-        path: /red/*
+          servicePort: 80
