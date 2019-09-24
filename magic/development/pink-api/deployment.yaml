@@ -17,9 +17,9 @@ spec:
         image: brentlangston/example-api:latest
         resources:
           limits:
-            cpu: "1000m"
+            cpu: "3000m"
           requests:
-            cpu: "750m"
+            cpu: "2000m"
         imagePullPolicy: "Always"
         ports:
         - containerPort: 8000
