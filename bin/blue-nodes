@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+kubectl get pods --selector app=blue-api -o wide | awk '{ print $1, $2, $3, $7 }' | column -t

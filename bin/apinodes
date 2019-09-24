@@ -1,0 +1,9 @@
+#!/bin/bash
+
+nodegroup=api-workloads-ng1
+
+command="kubectl get nodes --selector alpha.eksctl.io/nodegroup-name=$nodegroup"
+
+echo -n Node Count:\  ; $command | tail -n+2 | wc -l; echo Node List: ; $command | column -t
+
+

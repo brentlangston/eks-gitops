@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+path=$1
+
+trap "exit" INT
+
+curlcommand="curl -s --connect-timeout .5 --retry 3 --retry-delay 1 --retry-connrefuse"
+
+export alb_url=internal-c0d6212a-default-albingres-97c8-2054649156.us-east-1.elb.amazonaws.com
+
+if [ $path == "red" ]; then
+  while true; do $curlcommand --max-time 10 -H 'Host: red-api.service.internal' $alb_url 2>/dev/null; done
+else
+  while true; do $curlcommand --max-time 1 $alb_url/${path}/ 2>/dev/null; done
+fi

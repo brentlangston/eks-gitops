@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+kubectl get pods --selector app=blue-api -o wide | awk '{ print $1, $2, $3, $4, $5, $6, $7 }' | column -t; echo NODES:; kubectl get nodes
+
+#watch -n1 -d "kubectl get pods --selector app=blue-api -o wide | awk '{ print $1, $2, $3, $4, $5, $6, $7 }' | column -t; echo NODES:; kubectl get nodes"

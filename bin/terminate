@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+node=$1
+
+# test that we are in the right ip space -- all nodes should start with ip-10-132-
+
+echo $node | grep -q ip-10-132-
+
+instance=$(aws ec2 describe-instances --filter Name=private-dns-name,Values=${node} --query 'Reservations[].Instances[].[InstanceId]' --output text)
+
+while true; do
+    read -p "terminate instance ${instance}? (y/n) " yn
+    case $yn in
+        [Yy]* ) aws ec2 terminate-instances --instance-ids ${instance} &> /dev/null; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done

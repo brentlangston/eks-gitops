@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+path=$1
+
+trap "exit" INT
+
+export alb_url=internal-c0d6212a-default-albingres-97c8-2054649156.us-east-1.elb.amazonaws.com
+
+if [ $path == "red" ]; then
+  while true; do ab -l -s 1 -H 'Host: red-api.service.internal' -c 30 -n 1000000 internal-c0d6212a-default-albingres-97c8-2054649156.us-east-1.elb.amazonaws.com/; done  
+else
+  while true; do ab -l -s 1 -c 30 -t 5 -n 100000000000000 $alb_url/${path}/ 2>/dev/null | grep 'Requests per second'; done
+fi
