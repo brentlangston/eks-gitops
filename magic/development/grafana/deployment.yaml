@@ -14,6 +14,7 @@ spec:
     version: 3.8.15
   values:
     service.type: LoadBalancer
+    service.port: 80
     persistence:
         enabled: true
     persistence.storageClassName: efs
