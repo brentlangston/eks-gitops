@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: grafana-prometheus-overview-dashboard
-  namespace: monitoring
+  namespace: grafana
   labels:
     grafana_dashboard: '1'
 data:
