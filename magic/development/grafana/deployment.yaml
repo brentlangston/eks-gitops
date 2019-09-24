@@ -13,6 +13,7 @@ spec:
     name: grafana
     version: 3.8.10
   values:
+    service.type: LoadBalancer
     persistence:
         enabled: true
     persistence.storageClassName: efs
@@ -26,7 +27,6 @@ spec:
               url: http://prometheus-server.prometheus.svc.cluster.local
               access: proxy
               isDefault: true
-    service.type: LoadBalancer
     sidecar:
       datasources:
         enabled: true
