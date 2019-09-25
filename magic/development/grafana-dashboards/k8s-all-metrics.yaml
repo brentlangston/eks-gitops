@@ -7,7 +7,7 @@ metadata:
   labels:
     grafana_dashboard: '1'
 data:
-  prometheus-dashboard.json: |-
+  k8s-all-metrics.json: |-
     {
       "__inputs": [
         {
