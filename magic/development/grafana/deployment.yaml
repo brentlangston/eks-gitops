@@ -35,33 +35,3 @@ spec:
       dashboards:
         enabled: true
         label: grafana_dashboard
-    dashboards:
-      default:
-        k8s-cluster-monitoring:
-          gnetId: 10000
-          revision: 1
-          datasource: Prometheus
-        k8s-cluster:
-          gnetId: 10670
-          revision: 4
-          datasource: Prometheus
-        k8s-cluster-details:
-          gnetId: 10856
-          revision: 1
-          datasource: Prometheus
-        k8s-deployment:
-          gnetId: 10858
-          revision: 1
-          datasource: Prometheus
-        k8s-all:
-          gnetId: 10185
-          revision: 1
-          datasource: Prometheus
-        k8s-cluster-health:
-          gnetId: 5312
-          revision: 1
-          datasource: Prometheus
-        k8s-cluster-usage:
-          gnetId: 315
-          revision: 3
-          datasource: Prometheus
