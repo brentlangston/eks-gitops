@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: yellow-api
-        image: brentlangston/example-api:latest
+        image: 048815747800.dkr.ecr.us-east-1.amazonaws.com/examp-examp-793dcbtqqe9j:12123
         env:
         - name: msg
           value: "yellow-api! "
