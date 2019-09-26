@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 path=$1
 
 trap "exit" INT
