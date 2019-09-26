@@ -17,7 +17,7 @@ spec:
         image: 048815747800.dkr.ecr.us-east-1.amazonaws.com/examp-examp-793dcbtqqe9j:700c3d7
         env:
         - name: msg
-          value: "blue-api! "
+          value: "BLUE-API! "
         resources:
           limits:
             cpu: "1000m"
